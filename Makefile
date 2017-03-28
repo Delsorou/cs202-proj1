@@ -15,7 +15,7 @@
 CC=g++
 CFLAGS=-c -Wall -std=c++11
 LDFLAGS=
-SOURCES=bankacct.cpp account.cpp aseek.cpp
+SOURCES=banking.cpp account.cpp aseek.cpp
 OBJECTS=$(SOURCES:.cpp=.o)
 EXECUTABLE=bankacct
 
@@ -27,6 +27,5 @@ $(EXECUTABLE) : $(OBJECTS)
 .cpp.o :
 	$(CC) $(CFLAGS) $< -o $@
 
-# ... why doesn't this work properly...
-#clean :
-#	rm $(OBJECTS) $(EXECUTABLE)
+clean :
+	rm $(OBJECTS) $(EXECUTABLE)
